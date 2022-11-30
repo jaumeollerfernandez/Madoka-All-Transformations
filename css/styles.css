@@ -1,0 +1,50 @@
+nav ul li{
+    display: flex;
+    list-style: none;
+    display: inline-block;
+    margin-top: 5px;
+    padding: 3px;
+}
+
+button{
+    background-color: black;
+}
+
+nav{
+    background-color: black;
+    font-family: 'IM Fell Great Primer SC', serif;
+    color: whitesmoke;
+    max-height: 15rem;
+}
+
+.back-video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: 3rem;
+    z-index: -1;
+    background-color: black;
+    animation: 2s videotransition;
+    margin-bottom: 10px;
+}
+
+@keyframes videotransition{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+html{
+    background-color: black;
+}
+
+footer{
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
