@@ -29,13 +29,16 @@ nav{
     max-height: 15rem;
 }
 
-.back-video{
-    position: absolute;
+.background{
     width: 100%;
-    height: 100%;
-    right: 0;
-    bottom: 5%;
-    z-index: -1;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.back-video{
     background-color: black;
     animation: 2s videotransition;
     margin-bottom: 10px;
