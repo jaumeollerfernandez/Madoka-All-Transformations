@@ -5,6 +5,20 @@ nav ul li{
     margin-top: 5px;
     padding: 3px;
 }
+footer ul li{
+    display: flex;
+    list-style: none;
+    display: inline-block;
+    margin-top: 5px;
+    padding: 3px;
+}
+
+footer button{
+    background-color: white;
+    width: 200px;
+
+
+}
 
 button{
     background-color: black;
