@@ -1,4 +1,6 @@
 var ChangeScreen = false;
+var AudioActivated = false;
+var currentVideo = document.getElementById('videoShowed')
 
 
 function ChangeVideo(pName){
@@ -28,8 +30,20 @@ function FullScreen(pChanging){
     let currentVideo = document.getElementById('videoShowed');
     if(pChanging == false){
         currentVideo.setAttribute('class', 'back-video fullscreen');
-        pChanging = true;
+        ChangeScreen = true;
     }else{
         currentVideo.setAttribute('class', 'back-video');
+        ChangeScreen = false;
+    }
+}
+
+function Audio(){
+    let currentVideo = document.getElementById('videoShowed');
+    if(AudioActivated == false){
+        currentVideo.muted = false;
+        AudioActivated = true;
+    }else{
+        currentVideo.muted = true;
+        AudioActivated = false;
     }
 }
