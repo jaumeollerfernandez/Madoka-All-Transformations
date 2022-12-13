@@ -16,8 +16,6 @@ footer ul li{
 footer button{
     background-color: white;
     width: 200px;
-
-
 }
 
 button{
@@ -51,9 +49,9 @@ html{
 
 footer{
     width: 100%;
-    bottom: 0;
-    right: 0;
     position: absolute;
+    bottom: 0;
+
 }
 
 .carrouselimg{
