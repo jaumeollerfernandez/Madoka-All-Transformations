@@ -1,35 +1,12 @@
 ![Figure 1-1](https://github.com/jaumeollerfernandez/puella-magi-madoka-magica-transformations-website/blob/main/img/img_main.png?raw=true)
 
-# Foobar
+# Puella Magi Madoka Magica: Rebellion Transformations
 
-Foobar is a Python library for dealing with word pluralization.
-
-## Installation
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
-```
-
-## Usage
-
-```python
-import foobar
-
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-```
+This website was origined from a class exercise with videos. It contains the transformations from the movie. 
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first
+If you like the project, you can follow me to see my updates in another projects. All contributions are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
