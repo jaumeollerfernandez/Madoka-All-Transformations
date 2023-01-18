@@ -1,97 +1,94 @@
-nav ul li{
-    display: flex;
-    list-style: none;
-    display: inline-block;
-    margin-top: 5px;
-    padding: 3px;
+nav ul li {
+  display: flex;
+  list-style: none;
+  display: inline-block;
+  margin-top: 5px;
+  padding: 3px;
 }
-nav button{
-    background-color: black;
+nav button {
+  background-color: black;
 }
-footer ul li{
-    display: flex;
-    list-style: none;
-    display: inline-block;
-    margin-top: 5px;
-    padding: 3px;
-}
-
-footer button{
-    background-color: rgba(255, 255, 255, 0.13);
-    color: #ffffff;
-    width: 200px;
-    height: 50px;
-    font-family: 'IM Fell Great Primer SC', serif;
+footer ul li {
+  display: flex;
+  list-style: none;
+  display: inline-block;
+  margin-top: 5px;
+  padding: 3px;
 }
 
-nav{
-    background-color: black;
-    font-family: 'IM Fell Great Primer SC', serif;
-    color: whitesmoke;
-    max-height: 15rem;
+footer button {
+  background-color: rgba(255, 255, 255, 0.13);
+  color: #ffffff;
+  width: 200px;
+  height: 50px;
+  font-family: "IM Fell Great Primer SC", serif;
 }
 
-.background{
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
+nav {
+  background-color: black;
+  font-family: "IM Fell Great Primer SC", serif;
+  color: whitesmoke;
+  max-height: 15rem;
 }
 
-.back-video{
-    background-color: black;
-    animation: 2s videotransition;
-    margin-bottom: 10px;
+.background {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
 }
 
-.fullscreen{
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+.back-video {
+  background-color: black;
+  animation: 2s videotransition;
+  margin-bottom: 10px;
 }
 
-
-html{
-    background-color: black;
+.fullscreen {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
-footer{
-    width: 100%;
-    bottom: 0;
-    position: fixed;
-    /* animation: 2s videotransition; */
-
+html {
+  background-color: black;
 }
 
-.carrouselimg{
-
+footer {
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  /* animation: 2s videotransition; */
 }
 
-.wildcard{
-    position: absolute;
-    align-items: center;
-    width: 30%;
-    height: 70%;
-    bottom: 0;
-    left: 35%;
-    right: 35%;
-    top: 20%;
-    background: #ffffff;
-    mix-blend-mode: difference;
-    border: 10px solid #0ee703;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 32px;
+.carrouselimg {
 }
 
-@keyframes videotransition{
-    from{
-        opacity: 0%;
-    }
-    to{
-        opacity: 100%;
-    }
+.wildcard {
+  position: absolute;
+  align-items: center;
+  width: 30%;
+  height: 70%;
+  bottom: 0;
+  left: 35%;
+  right: 35%;
+  top: 20%;
+  background: #ffffff;
+  mix-blend-mode: difference;
+  border: 10px solid #0ee703;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 32px;
+}
+
+@keyframes videotransition {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }

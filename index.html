@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Puelli Magicka Madoka: Database</title>
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="col-3 p-2">
-                <img src="img/link_movie.png" alt="">
-            </div>
-            <div class="col-6 text-center">
-                <ul class="magickaButtons">
-                    <li>
-                        <button onclick="ChangeVideo('madoka')">
-                            <img name="madoka" src="img/chara_thumb1.gif" alt="">
-                        </button>
-                    </li>
-                    <li>
-                        <button onclick="ChangeVideo('homura')">
-                            <img name="homura" src="img/chara_thumb2.gif" alt="">
-                        </button>
-                    </li>
-                    <li>
-                        <button onclick="ChangeVideo('mamitomoe')">
-                            <img name="mamitomoe" src="img/chara_thumb3.gif" alt="">
-                        </button>
-                    </li>
-                    <li>
-                        <button name="sayaka" onclick="ChangeVideo('sayaka')">
-                            <img src="img/chara_thumb4.gif" alt="">
-                        </button>
-                    </li>
-                    <li>
-                        <button name="kyoko" onclick="ChangeVideo('kyoko')">
-                            <img src="img/chara_thumb6.gif" alt="">
-                        </button>
-                    </li>
-                </ul>
-                <div class="row">
-                    <div class="col text-center">
-                        <h3 class="">Choose your magical girl</h3>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="col-3 p-2 text-end">
-                <img src="img/link_madoka10th.png" alt="">
-            </div>
-        </nav>
-        
+      <div class="col-3 p-2">
+        <img src="img/link_movie.png" alt="" />
+      </div>
+      <div class="col-6 text-center">
+        <ul class="magickaButtons">
+          <li>
+            <button onclick="ChangeVideo('madoka')">
+              <img name="madoka" src="img/chara_thumb1.gif" alt="" />
+            </button>
+          </li>
+          <li>
+            <button onclick="ChangeVideo('homura')">
+              <img name="homura" src="img/chara_thumb2.gif" alt="" />
+            </button>
+          </li>
+          <li>
+            <button onclick="ChangeVideo('mamitomoe')">
+              <img name="mamitomoe" src="img/chara_thumb3.gif" alt="" />
+            </button>
+          </li>
+          <li>
+            <button name="sayaka" onclick="ChangeVideo('sayaka')">
+              <img src="img/chara_thumb4.gif" alt="" />
+            </button>
+          </li>
+          <li>
+            <button name="kyoko" onclick="ChangeVideo('kyoko')">
+              <img src="img/chara_thumb6.gif" alt="" />
+            </button>
+          </li>
+        </ul>
+        <div class="row">
+          <div class="col text-center">
+            <h3 class="">Choose your magical girl</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-3 p-2 text-end">
+        <img src="img/link_madoka10th.png" alt="" />
+      </div>
+    </nav>
+
     <!-- <div class="row">
         <div class="col text-center wildcard ">
             <img class="carrouselimg" src="img/chara1_img.png"></img>
@@ -65,30 +72,32 @@
     </div> -->
 
     <div class="background">
-        <video id="videoShowed" autoplay loop class="back-video">
-            <source id="backgroundvideo" src="video/kyoko.mp4" type="video/mp4">
-        </video>
+      <video id="videoShowed" autoplay loop class="back-video">
+        <source id="backgroundvideo" src="video/kyoko.mp4" type="video/mp4" />
+      </video>
     </div>
-    
-</body>
-<footer class="text-center">
-   <ul>
-    <li>
+  </body>
+  <footer class="text-center">
+    <ul>
+      <li>
         <button onclick="PlayVideo()">Play</button>
-    </li>
-    <li>
+      </li>
+      <li>
         <button onclick="PauseVideo()">Stop</button>
-    </li>
-    <li>
+      </li>
+      <li>
         <button onclick="FullScreen(ChangeScreen)">Fullscreen</button>
-    </li>
-    <li>
+      </li>
+      <li>
         <button onclick="Audio()">Audio</button>
-    </li>
-        
-   </ul>
-</footer>
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-<script src="js/app.js"></script>
+      </li>
+    </ul>
+  </footer>
+  <!-- JavaScript Bundle with Popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/app.js"></script>
 </html>
