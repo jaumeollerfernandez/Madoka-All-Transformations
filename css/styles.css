@@ -9,23 +9,23 @@ nav ul li{
     margin-top: 5px;
     padding: 3px;
 }
-nav button{
-    background-color: black;
+nav button {
+  background-color: black;
 }
-footer ul li{
-    display: flex;
-    list-style: none;
-    display: inline-block;
-    margin-top: 5px;
-    padding: 3px;
+footer ul li {
+  display: flex;
+  list-style: none;
+  display: inline-block;
+  margin-top: 5px;
+  padding: 3px;
 }
 
-footer button{
-    background-color: rgba(255, 255, 255, 0.13);
-    color: #ffffff;
-    width: 200px;
-    height: 50px;
-    font-family: 'IM Fell Great Primer SC', serif;
+footer button {
+  background-color: rgba(255, 255, 255, 0.13);
+  color: #ffffff;
+  width: 200px;
+  height: 50px;
+  font-family: "IM Fell Great Primer SC", serif;
 }
 
 nav{
@@ -36,13 +36,13 @@ nav{
     height: 20%;
 }
 
-.background{
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
+.background {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
 }
 
 .back-video{
@@ -52,17 +52,40 @@ nav{
     margin-bottom: 10px;
 }
 
-.fullscreen{
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+.fullscreen {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+html {
+  background-color: black;
+}
+
+footer {
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  /* animation: 2s videotransition; */
 }
 
 
-html{
-    background-color: black;
+.wildcard {
+  position: absolute;
+  align-items: center;
+  width: 30%;
+  height: 70%;
+  bottom: 0;
+  left: 35%;
+  right: 35%;
+  top: 20%;
+  background: #ffffff;
+  mix-blend-mode: difference;
+  border: 10px solid #0ee703;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 32px;
 }
 
 footer{
