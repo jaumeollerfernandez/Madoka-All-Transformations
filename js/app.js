@@ -13,6 +13,7 @@ function ChangeVideo(pName) {
 function AssignAnimation(pVideo) {
   let clone = pVideo.cloneNode(true);
   pVideo.parentNode.replaceChild(clone, pVideo);
+  CarouselControl(carousel)
   // clone.load();
 }
 
@@ -54,15 +55,15 @@ function changeRoute(pRoute){
 
 function CarouselControl(pRuta){
 
-
+    console.log('inicaindo carousel')
     let PADRE_CARROUSEL = document.getElementById('carouselExampleControls')
-    PADRE_CARROUSEL.innerHTML = ''
+    PADRE_CARROUSEL.innerHTML = ""
     let carousel_inner = document.createElement('div');
     carousel_inner.setAttribute('class', 'carousel-inner');
     let carousel_item;
     let img;
     let array = ['First', 'Second', 'Third']
-    for(let i = 0; i< 2; i++){
+    for(let i = 1; i< 3; i++){
     carousel_item = document.createElement('div');
     carousel_item.setAttribute('class', 'carousel-item active');
     img = document.createElement('img')
