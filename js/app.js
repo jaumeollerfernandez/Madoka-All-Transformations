@@ -1,14 +1,14 @@
 var ChangeScreen = false;
 var AudioActivated = false;
 var currentVideo = document.getElementById('videoShowed')
-var carousel = 'img/madoka'
+var carousel = 'img/carousel_madoka'
 CarouselControl(carousel)
 
 function ChangeVideo(pName) {
   let backgroundVideo = document.getElementById("backgroundvideo");
   let video = document.getElementById("videoShowed");
   backgroundVideo.setAttribute("src", `video/${pName}.mp4`);
-  changeRoute(`/img/${pName}`)
+  changeRoute(`/img/carousel_${pName}`)
   AssignAnimation(video);
   CarouselControl(carousel)
 }
