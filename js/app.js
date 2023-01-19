@@ -1,7 +1,7 @@
 var ChangeScreen = false;
 var AudioActivated = false;
 var currentVideo = document.getElementById('videoShowed')
-var carousel = 'img/carousel_madoka'
+var carousel = 'img/carousel_kyoko'
 CarouselControl(carousel)
 
 function ChangeVideo(pName) {
