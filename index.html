@@ -1,94 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Puelli Magicka Madoka: Database</title>
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="col-3 p-2">
-                <img src="img/link_movie.png" alt="">
-            </div>
-            <div class="col-6 text-center">
-                <ul class="magickaButtons">
-                    <li>
-                        <button onclick="ChangeVideo('madoka')">
-                            <img name="madoka" src="img/chara_thumb1.gif" alt="">
-                        </button>
-                    </li>
-                    <li>
-                        <button onclick="ChangeVideo('homura')">
-                            <img name="homura" src="img/chara_thumb2.gif" alt="">
-                        </button>
-                    </li>
-                    <li>
-                        <button onclick="ChangeVideo('mamitomoe')">
-                            <img name="mamitomoe" src="img/chara_thumb3.gif" alt="">
-                        </button>
-                    </li>
-                    <li>
-                        <button name="sayaka" onclick="ChangeVideo('sayaka')">
-                            <img src="img/chara_thumb4.gif" alt="">
-                        </button>
-                    </li>
-                    <li>
-                        <button name="kyoko" onclick="ChangeVideo('kyoko')">
-                            <img src="img/chara_thumb6.gif" alt="">
-                        </button>
-                    </li>
-                </ul>
-                <div class="row">
-                    <div class="col text-center">
-                        <h3 class="">Choose your magical girl</h3>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="col-3 p-2 text-end">
-                <img src="img/link_madoka10th.png" alt="">
-            </div>
-        </nav>
-        
-    <!-- <div class="row">
-        <div class="col text-center wildcard ">
-            <img class="carrouselimg" src="img/chara1_img.png"></img>
+      <div class="col-3 p-2">
+        <img src="img/link_movie.png" alt="" />
+      </div>
+      <div class="col-6 text-center">
+        <ul class="magickaButtons">
+          <li>
+            <button onclick="ChangeVideo('madoka')">
+              <img name="madoka" src="img/chara_thumb1.gif" alt="" />
+            </button>
+          </li>
+          <li>
+            <button onclick="ChangeVideo('homura')">
+              <img name="homura" src="img/chara_thumb2.gif" alt="" />
+            </button>
+          </li>
+          <li>
+            <button onclick="ChangeVideo('mamitomoe')">
+              <img name="mamitomoe" src="img/chara_thumb3.gif" alt="" />
+            </button>
+          </li>
+          <li>
+            <button name="sayaka" onclick="ChangeVideo('sayaka')">
+              <img src="img/chara_thumb4.gif" alt="" />
+            </button>
+          </li>
+          <li>
+            <button name="kyoko" onclick="ChangeVideo('kyoko')">
+              <img src="img/chara_thumb6.gif" alt="" />
+            </button>
+          </li>
+          <li>
+            <button
+              name="random"
+              onclick=""
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              <img src="img/chara_thumb5.gif" alt="" />
+            </button>
+          </li>
+        </ul>
+        <div class="row">
+          <div class="col text-center">
+            <h3 class="">Choose your magical girl</h3>
+          </div>
         </div>
-    </div> -->
+      </div>
+      <div class="col-3 p-2 text-end">
+        <img src="img/link_madoka10th.png" alt="" />
+      </div>
+    </nav>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered " role="document">
+        <div class="modal-content bg-transparent">
+            <div class="text-center">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="" src="img/chara1_img.png" alt="First slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="" src="img/chara2_img.png" alt="Second slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="" src="img/chara3_img.png" alt="Third slide">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only"></span>
+                    </a>
+                  </div>
+
+
+
+              <!-- <img class="carrouselimg" src="img/chara1_img.png" /> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="background">
-        <video id="videoShowed" autoplay loop class="back-video">
-            <source id="backgroundvideo" src="video/kyoko.mp4" type="video/mp4">
-        </video>
+      <video id="videoShowed" autoplay loop class="back-video my-3">
+        <source id="backgroundvideo" src="video/kyoko.mp4" type="video/mp4" />
+      </video>
     </div>
-    
-</body>
-<footer class="text-center">
-   <ul>
-    <li>
+  </body>
+  <footer class="text-center">
+    <ul>
+      <li>
         <button onclick="PlayVideo()">Play</button>
-    </li>
-    <li>
+      </li>
+      <li>
         <button onclick="PauseVideo()">Stop</button>
-    </li>
-    <li>
+      </li>
+      <li>
         <button onclick="FullScreen(ChangeScreen)">Fullscreen</button>
-    </li>
-    <li>
+      </li>
+      <li>
         <button onclick="Audio()">Audio</button>
-    </li>
-        
-   </ul>
-</footer>
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-<script src="js/app.js"></script>
+      </li>
+      <li>
+        <button  name="random"
+        onclick=""
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"onclick="CarouselControl('img/carousel_madoka')">Images</button>
+      </li>
+    </ul>
+  </footer>
+  <!-- JavaScript Bundle with Popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/app.js"></script>
 </html>

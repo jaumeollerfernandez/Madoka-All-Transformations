@@ -1,3 +1,7 @@
+
+body{
+    animation: 4s videotransition;
+}
 nav ul li{
     display: flex;
     list-style: none;
@@ -28,7 +32,8 @@ nav{
     background-color: black;
     font-family: 'IM Fell Great Primer SC', serif;
     color: whitesmoke;
-    max-height: 15rem;
+    /* max-height: 15rem; */
+    height: 20%;
 }
 
 .background{
@@ -41,6 +46,7 @@ nav{
 }
 
 .back-video{
+    width: 50%;
     background-color: black;
     animation: 2s videotransition;
     margin-bottom: 10px;
@@ -63,27 +69,23 @@ footer{
     width: 100%;
     bottom: 0;
     position: fixed;
-    /* animation: 2s videotransition; */
+    animation: 2s videotransition;
 
 }
 
-.carrouselimg{
-
-}
-
-.wildcard{
-    position: absolute;
+.wildcard {
+    /* position: absolute; */
     align-items: center;
-    width: 30%;
-    height: 70%;
+    /* width: 30%; */
+    /* height: 70%; */
     bottom: 0;
     left: 35%;
     right: 35%;
     top: 20%;
-    background: #ffffff;
+    /* background: #ffffff; */
     mix-blend-mode: difference;
     border: 10px solid #0ee703;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
     border-radius: 32px;
 }
 
