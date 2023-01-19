@@ -1,20 +1,21 @@
 var ChangeScreen = false;
 var AudioActivated = false;
 var currentVideo = document.getElementById('videoShowed')
-var carousel = 'img/carousel_madoka'
+var carousel = 'img/madoka'
+CarouselControl(carousel)
 
 function ChangeVideo(pName) {
   let backgroundVideo = document.getElementById("backgroundvideo");
   let video = document.getElementById("videoShowed");
   backgroundVideo.setAttribute("src", `video/${pName}.mp4`);
+  changeRoute(`/img/${pName}`)
   AssignAnimation(video);
+  CarouselControl(carousel)
 }
 
 function AssignAnimation(pVideo) {
   let clone = pVideo.cloneNode(true);
   pVideo.parentNode.replaceChild(clone, pVideo);
-  CarouselControl(carousel)
-  // clone.load();
 }
 
 function PauseVideo() {
@@ -54,41 +55,59 @@ function changeRoute(pRoute){
 }
 
 function CarouselControl(pRuta){
-
-    console.log('inicaindo carousel')
     let PADRE_CARROUSEL = document.getElementById('carouselExampleControls')
     PADRE_CARROUSEL.innerHTML = ""
     let carousel_inner = document.createElement('div');
     carousel_inner.setAttribute('class', 'carousel-inner');
     let carousel_item;
     let img;
-    let array = ['First', 'Second', 'Third']
-    for(let i = 1; i< 3; i++){
+    let array = ['','First', 'Second', 'Third']
+    for(let i = 1; i <= 3; i++){
     carousel_item = document.createElement('div');
     carousel_item.setAttribute('class', 'carousel-item active');
     img = document.createElement('img')
     img.setAttribute('alt', `${array[i]} slide`)
     img.setAttribute('src', `${pRuta}/${i}.jpg`)
+    img.setAttribute('class', `carousel-img`)
     carousel_item.appendChild(img)
     carousel_inner.appendChild(carousel_item)
-    }
+  }
+  
+  let a = document.createElement('a')
+  let span = document.createElement('span')
+  a.setAttribute('class', 'carousel-control-prev')
+  a.setAttribute('href', '#carouselExampleControls')
+  a.setAttribute('role', 'button')
+  a.setAttribute('data-bs-slide', 'prev')
+  span.setAttribute('class', 'carousel-control-prev-icon')
+  span.setAttribute('aria-hidden', 'true')
+  a.appendChild(span)
+  
 
-    PADRE_CARROUSEL.appendChild(carousel_inner);
+  span = document.createElement('span')
+  span.setAttribute('class', 'sr-only')
+  a.append(span)
 
-    
+/////////////////////////////////////////////////////////////////
 
+  let b = document.createElement('a')
+  span = document.createElement('span')
+  b.setAttribute('class', 'carousel-control-next')
+  b.setAttribute('href', '#carouselExampleControls')
+  b.setAttribute('role', 'button')
+  b.setAttribute('data-bs-slide', 'next')
+  span.setAttribute('class', 'carousel-control-next-icon')
+  span.setAttribute('aria-hidden', 'true')
+  b.appendChild(span)
+  
+  span = document.createElement('span')
+  span.setAttribute('class', 'sr-only')
+  
+  b.appendChild(span)
 
+  carousel_inner.appendChild(a)
+  carousel_inner.appendChild(b)
 
-
-//     <div class="carousel-inner">
-//     <div class="carousel-item active">
-//       <img class="" src="img/chara1_img.png" alt="First slide">
-//     </div>
-//     <div class="carousel-item">
-//       <img class="" src="img/chara2_img.png" alt="Second slide">
-//     </div>
-//     <div class="carousel-item">
-//       <img class="" src="img/chara3_img.png" alt="Third slide">
-//     </div>
-//   </div>
+  PADRE_CARROUSEL.appendChild(carousel_inner);
+  
 }

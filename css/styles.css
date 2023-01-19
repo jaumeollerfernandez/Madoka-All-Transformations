@@ -71,6 +71,11 @@ footer {
   /* animation: 2s videotransition; */
 }
 
+.carousel-img{
+  width: 100%;
+  height: auto;
+}
+
 
 .wildcard {
   position: absolute;
@@ -96,14 +101,9 @@ footer{
 
 }
 
-.modal{
-  --bs-modal-height: 0%;
-  --bs-modal-width: 100%;
-}
-
 .carousel_img{
-  width: 50%;
-  height: 50%;
+  min-width: 500px;
+  min-height: 500px;
 }
 
 .wildcard {
