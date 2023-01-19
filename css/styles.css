@@ -101,6 +101,10 @@ footer{
 
 }
 
+.modal{
+  --bs-modal-width: 900px;
+}
+
 .carousel_img{
   min-width: 500px;
   min-height: 500px;
