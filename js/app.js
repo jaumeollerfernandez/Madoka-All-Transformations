@@ -2,6 +2,8 @@ var ChangeScreen = false;
 var AudioActivated = false;
 var currentVideo = document.getElementById('videoShowed')
 var carousel = 'img/carousel_kyoko'
+var window_config
+var window_reference
 CarouselControl(carousel)
 
 function ChangeVideo(pName) {
@@ -110,4 +112,9 @@ function CarouselControl(pRuta){
 
   PADRE_CARROUSEL.appendChild(carousel_inner);
   
+}
+
+function openWindow(){
+  window_config = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes"
+  window_reference = window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley", "RickRoll'D", window_config);
 }
