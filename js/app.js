@@ -1,18 +1,18 @@
 var ChangeScreen = false;
 var AudioActivated = false;
-var currentVideo = document.getElementById('videoShowed')
-var carousel = 'img/carousel_kyoko'
-var window_config
-var window_reference
-CarouselControl(carousel)
+var currentVideo = document.getElementById("videoShowed");
+var carousel = "img/carousel_kyoko";
+var window_config;
+var window_reference;
+CarouselControl(carousel);
 
 function ChangeVideo(pName) {
   let backgroundVideo = document.getElementById("backgroundvideo");
   let video = document.getElementById("videoShowed");
   backgroundVideo.setAttribute("src", `video/${pName}.mp4`);
-  changeRoute(`/img/carousel_${pName}`)
+  changeRoute(`/img/carousel_${pName}`);
   AssignAnimation(video);
-  CarouselControl(carousel)
+  CarouselControl(carousel);
 }
 
 function AssignAnimation(pVideo) {
@@ -41,80 +41,83 @@ function FullScreen(pChanging) {
   }
 }
 
-function Audio(){
-    let currentVideo = document.getElementById('videoShowed');
-    if(AudioActivated == false){
-        currentVideo.muted = false;
-        AudioActivated = true;
-    }else{
-        currentVideo.muted = true;
-        AudioActivated = false;
-    }
-}
-
-function changeRoute(pRoute){
-    carousel = pRoute
-}
-
-function CarouselControl(pRuta){
-    let PADRE_CARROUSEL = document.getElementById('carouselExampleControls')
-    PADRE_CARROUSEL.innerHTML = ""
-    let carousel_inner = document.createElement('div');
-    carousel_inner.setAttribute('class', 'carousel-inner');
-    let carousel_item;
-    let img;
-    let array = ['','First', 'Second', 'Third']
-    for(let i = 0; i <= 2; i++){
-    carousel_item = document.createElement('div');
-    carousel_item.setAttribute('class', 'carousel-item active');
-    img = document.createElement('img')
-    img.setAttribute('alt', `${array[i]} slide`)
-    img.setAttribute('src', `${pRuta}/${i}.jpg`)
-    img.setAttribute('class', `carousel-img`)
-    carousel_item.appendChild(img)
-    carousel_inner.appendChild(carousel_item)
+function Audio() {
+  let currentVideo = document.getElementById("videoShowed");
+  if (AudioActivated == false) {
+    currentVideo.muted = false;
+    AudioActivated = true;
+  } else {
+    currentVideo.muted = true;
+    AudioActivated = false;
   }
-  
-  let a = document.createElement('a')
-  let span = document.createElement('span')
-  a.setAttribute('class', 'carousel-control-prev')
-  a.setAttribute('href', '#carouselExampleControls')
-  a.setAttribute('role', 'button')
-  a.setAttribute('data-bs-slide', 'prev')
-  span.setAttribute('class', 'carousel-control-prev-icon')
-  span.setAttribute('aria-hidden', 'true')
-  a.appendChild(span)
-  
+}
 
-  span = document.createElement('span')
-  span.setAttribute('class', 'sr-only')
-  a.append(span)
+function changeRoute(pRoute) {
+  carousel = pRoute;
+}
 
-/////////////////////////////////////////////////////////////////
+function CarouselControl(pRuta) {
+  let PADRE_CARROUSEL = document.getElementById("carouselExampleControls");
+  PADRE_CARROUSEL.innerHTML = "";
+  let carousel_inner = document.createElement("div");
+  carousel_inner.setAttribute("class", "carousel-inner");
+  let carousel_item;
+  let img;
+  let array = ["", "First", "Second", "Third"];
+  for (let i = 0; i <= 2; i++) {
+    carousel_item = document.createElement("div");
+    carousel_item.setAttribute("class", "carousel-item active");
+    img = document.createElement("img");
+    img.setAttribute("alt", `${array[i]} slide`);
+    img.setAttribute("src", `${pRuta}/${i}.jpg`);
+    img.setAttribute("class", `carousel-img`);
+    carousel_item.appendChild(img);
+    carousel_inner.appendChild(carousel_item);
+  }
 
-  let b = document.createElement('a')
-  span = document.createElement('span')
-  b.setAttribute('class', 'carousel-control-next')
-  b.setAttribute('href', '#carouselExampleControls')
-  b.setAttribute('role', 'button')
-  b.setAttribute('data-bs-slide', 'next')
-  span.setAttribute('class', 'carousel-control-next-icon')
-  span.setAttribute('aria-hidden', 'true')
-  b.appendChild(span)
-  
-  span = document.createElement('span')
-  span.setAttribute('class', 'sr-only')
-  
-  b.appendChild(span)
+  let a = document.createElement("a");
+  let span = document.createElement("span");
+  a.setAttribute("class", "carousel-control-prev");
+  a.setAttribute("href", "#carouselExampleControls");
+  a.setAttribute("role", "button");
+  a.setAttribute("data-bs-slide", "prev");
+  span.setAttribute("class", "carousel-control-prev-icon");
+  span.setAttribute("aria-hidden", "true");
+  a.appendChild(span);
 
-  carousel_inner.appendChild(a)
-  carousel_inner.appendChild(b)
+  span = document.createElement("span");
+  span.setAttribute("class", "sr-only");
+  a.append(span);
+
+  /////////////////////////////////////////////////////////////////
+
+  let b = document.createElement("a");
+  span = document.createElement("span");
+  b.setAttribute("class", "carousel-control-next");
+  b.setAttribute("href", "#carouselExampleControls");
+  b.setAttribute("role", "button");
+  b.setAttribute("data-bs-slide", "next");
+  span.setAttribute("class", "carousel-control-next-icon");
+  span.setAttribute("aria-hidden", "true");
+  b.appendChild(span);
+
+  span = document.createElement("span");
+  span.setAttribute("class", "sr-only");
+
+  b.appendChild(span);
+
+  carousel_inner.appendChild(a);
+  carousel_inner.appendChild(b);
 
   PADRE_CARROUSEL.appendChild(carousel_inner);
-  
 }
 
-function openWindow(){
-  window_config = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes"
-  window_reference = window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley", "RickRoll'D", window_config);
+function openWindow() {
+  window_config =
+    "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
+  window_reference = window.open(
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley",
+    "RickRoll'D",
+    window_config
+  );
 }
