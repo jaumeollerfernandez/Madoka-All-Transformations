@@ -64,7 +64,7 @@ function CarouselControl(pRuta){
     let carousel_item;
     let img;
     let array = ['','First', 'Second', 'Third']
-    for(let i = 1; i <= 3; i++){
+    for(let i = 0; i <= 2; i++){
     carousel_item = document.createElement('div');
     carousel_item.setAttribute('class', 'carousel-item active');
     img = document.createElement('img')
